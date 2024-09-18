@@ -242,12 +242,12 @@ function submitForm() {
         amplitude.track('Registration', event_properties);
 
         // Fake Backend record
-        event_properties = {};
-        event_properties.Ref='REG-38';
-        event_properties['Domain'] = Domain;
-        event_properties['Method'] = 'backend';
-        event_properties.Outcome = 'success';
-        amplitude.track('Registered', event_properties);
+        const backend_properties = {};
+        backend_properties.Ref='REG-38';
+        backend_properties['Domain'] = Domain;
+        backend_properties['Method'] = 'backend';
+        backend_properties.Outcome = 'success';
+        amplitude.track('Registered', backend_properties);
     }
 
 
