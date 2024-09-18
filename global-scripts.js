@@ -225,10 +225,12 @@ function submitForm() {
     }
 
     // Tracking
-    event_properties['Name'] = 'outcome';
+    
     event_properties['Domain'] = Domain;
-    event_properties['Feature'] = Feature;
-    amplitude.track('outcome', event_properties);
+    event_properties['Action'] = 'outcome';
+    event_properties['Name'] = 'Account';
+    event_properties['Method'] = 'Backend';
+    amplitude.track('Registration', event_properties);
 
     // Redirect
     // window.location.href = "confirmation.html" + window.location.search;
