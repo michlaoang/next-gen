@@ -116,6 +116,7 @@ function trackButtonClick(event) {
         var trackValue = target.getAttribute('data-track-value') || '';
         var trackCategory = target.getAttribute('data-track-category') || '';
         var trackSubcategory = target.getAttribute('data-track-subcategory') || '';
+         var trackOutcome = target.getAttribute('data-track-outcome') || '';
         var trackAmount = target.getAttribute('data-track-amount') || '';
         var trackInstrument = target.getAttribute('data-track-instrument') || '';
         var trackGenre = target.getAttribute('data-track-genre') || '';
@@ -133,6 +134,7 @@ function trackButtonClick(event) {
             Value: trackValue,
             Category: trackCategory,
             Subcategory: trackSubcategory,
+            Outcome: trackOutcome,
             Amount: trackAmount,
             Instrument: trackInstrument,
             Genre: trackGenre,
