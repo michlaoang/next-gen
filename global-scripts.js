@@ -210,17 +210,18 @@ function updateProgressBar(step) {
 }
 
 function submitForm() {
-    const event_properties = {};
+    
 
     // Simulate form submission outcome
+    const event_properties = {};
     const randomNumber = Math.floor(Math.random() * 100) + 1;
     if (randomNumber < 34) {
+        alert('Registration Failure');
         event_properties.Ref='REG-37';
         event_properties.Outcome = 'failure';
         const errors = ['Duplicate_Account', 'System_Unavailable', 'Fraud', 'Network_Issue'];
         const randomErrorIndex = Math.floor(Math.random() * errors.length);
         event_properties.Error = errors[randomErrorIndex];
-        alert('Registration Failure');
         event_properties['Domain'] = Domain;
         event_properties['Action'] = 'outcome';
         event_properties['Name'] = 'account';
@@ -228,21 +229,22 @@ function submitForm() {
         amplitude.track('Registration', event_properties);
 
     } else {
-        event_properties.Ref='REG-35';
-        event_properties.Outcome = 'success';
-        const statuses = ['verified', 'unverified'];
-        const randomStatusIndex = Math.floor(Math.random() * statuses.length);
-        event_properties.Status = statuses[randomStatusIndex];
         alert('Registration Success');
+        event_properties.Ref='REG-35';
         event_properties['Domain'] = Domain;
         event_properties['Action'] = 'outcome';
         event_properties['Name'] = 'account';
         event_properties['Method'] = 'backend';
+        event_properties.Outcome = 'success';
+        const statuses = ['verified', 'unverified'];
+        const randomStatusIndex = Math.floor(Math.random() * statuses.length);
+        event_properties.Status = statuses[randomStatusIndex];
         amplitude.track('Registration', event_properties);
 
         // Fake Backend record
-        const event_properties = {};
+        event_properties = {};
         event_properties.Ref='REG-38';
+        event_properties['Domain'] = Domain;
         event_properties['Method'] = 'backend';
         event_properties.Outcome = 'success';
         amplitude.track('Registered', event_properties);
