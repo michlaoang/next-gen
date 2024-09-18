@@ -217,6 +217,12 @@ function submitForm() {
         const randomErrorIndex = Math.floor(Math.random() * errors.length);
         event_properties.Error = errors[randomErrorIndex];
         alert('Registration Failure');
+        event_properties['Domain'] = Domain;
+        event_properties['Action'] = 'outcome';
+        event_properties['Name'] = 'account';
+        event_properties['Method'] = 'backend';
+        amplitude.track('Registration', event_properties);
+
     } else {
         event_properties.Ref='REG-35';
         event_properties.Outcome = 'success';
@@ -224,16 +230,22 @@ function submitForm() {
         const randomStatusIndex = Math.floor(Math.random() * statuses.length);
         event_properties.Status = statuses[randomStatusIndex];
         alert('Registration Success');
+        event_properties['Domain'] = Domain;
+        event_properties['Action'] = 'outcome';
+        event_properties['Name'] = 'account';
+        event_properties['Method'] = 'backend';
+        amplitude.track('Registration', event_properties);
+
+        // Fake Backend record
+        const event_properties = {};
+        event_properties.Ref='REG-38';
+        event_properties['Method'] = 'backend';
+        event_properties.Outcome = 'success';
+        amplitude.track('Registered', event_properties);
     }
 
-    // Tracking
-    
-    event_properties['Domain'] = Domain;
-    event_properties['Action'] = 'outcome';
-    event_properties['Name'] = 'Account';
-    event_properties['Method'] = 'Backend';
-    amplitude.track('Registration', event_properties);
 
+ 
     // Redirect
     // window.location.href = "confirmation.html" + window.location.search;
 }
