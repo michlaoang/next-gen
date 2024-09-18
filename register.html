@@ -2,7 +2,7 @@
 <html>
 <head>
     
-<title>Registration v1.9 </title>
+<title>Registration v1.10 </title>
 <link rel="stylesheet" type="text/css" href="global-styles.css">
 <script src="header-script.js"></script>    
 <script type="text/javascript">
@@ -51,57 +51,57 @@ amplitude.track(Feature, event_properties);
         <div class="form-step active" id="step-1">
             <h2>Step 1: Personal Information</h2>
             <label for="first-name">First Name:</label>
-            <input type="text" id="field.firstname" name="first-name" data-track-name="firstname" data-track-container="register" data-track-object="field" data-track-id="step 1" data-track-ref="REG-04" required>
+            <input type="text" id="field.firstname" name="first-name" data-track-name="firstname" data-track-object="field" data-track-id="step 1" data-track-ref="REG-04" required>
             <label for="last-name">Last Name:</label>
-            <input type="text" id="field.lastname" name="last-name" data-track-name="lastname" data-track-container="register" data-track-object="field" data-track-id="step 1" data-track-ref="REG-05" required>
-            <button id="button.step_1.next" type="button" onclick="nextStep(1)" data-track-container="register" data-track-object="button" data-track-name="next" data-track-category="step 1" data-track-ref="REG-06" >Next</button>
+            <input type="text" id="field.lastname" name="last-name" data-track-name="lastname" data-track-object="field" data-track-id="step 1" data-track-ref="REG-05" required>
+            <button id="button.step_1.next" type="button" onclick="nextStep(1)" data-track-object="button" data-track-name="next" data-track-category="step 1" data-track-ref="REG-06" >Next</button>
         </div>
          <div class="form-step" id="step-2">
             <h2>Step 2: Personal Information</h2>
             <label for="countryCode">Country Code:</label>
-            <input type="text" id="field.countryCode" name="dob" data-track-name="countryCode" data-track-container="register" data-track-object="field" data-track-id="step 2" data-track-ref="REG-09" required> 
+            <input type="text" id="field.countryCode" name="dob" data-track-name="countryCode" data-track-object="field" data-track-id="step 2" data-track-ref="REG-09" required> 
             <label for="mobile">Mobile Phone:</label>
-            <input type="text" id="field.mobilePhone" name="dob" data-track-name="mobilePhone" data-track-container="register" data-track-object="field" data-track-id="step 2" data-track-ref="REG-10" required>
+            <input type="text" id="field.mobilePhone" name="dob" data-track-name="mobilePhone" data-track-object="field" data-track-id="step 2" data-track-ref="REG-10" required>
             <label for="dob">Date of Birth:</label>
-            <input type="date" id="field.dob" name="dob" data-track-name="dob" data-track-container="register" data-track-object="field" data-track-id="step 2" data-track-ref="REG-11" required>
-            <button id="button.step_2.back" type="button" onclick="prevStep(2)" data-track-container="register" data-track-object="button" data-track-name="back" data-track-id="step 2" data-track-ref="REG-12" >Back</button>
-            <button id="button.step_2.next" type="button" onclick="nextStep(2)" data-track-container="register" data-track-object="button" data-track-name="next" data-track-id="step 2" data-track-ref="REG-13" >Next</button>
+            <input type="date" id="field.dob" name="dob" data-track-name="dob" data-track-object="field" data-track-id="step 2" data-track-ref="REG-11" required>
+            <button id="button.step_2.back" type="button" onclick="prevStep(2)"  data-track-object="button" data-track-name="back" data-track-id="step 2" data-track-ref="REG-12" >Back</button>
+            <button id="button.step_2.next" type="button" onclick="nextStep(2)"  data-track-object="button" data-track-name="next" data-track-id="step 2" data-track-ref="REG-13" >Next</button>
         </div>
         <div class="form-step" id="step-3">
             <h2>Step 3: Address Information</h2>
             <label for="address">Address:</label>
-            <input type="text" id="field.address" name="address" data-track-name="autoCompleteAddress" data-track-container="register" data-track-object="field" data-track-id="step 3" data-track-ref="REG-15" required>
+            <input type="text" id="field.address" name="address" data-track-name="autoCompleteAddress"  data-track-object="field" data-track-id="step 3" data-track-ref="REG-15" required>
             <label for="address">Number:</label>
-            <input type="text" id="field.streetNo" name="address" data-track-name="streetNo" data-track-container="register" data-track-object="field" data-track-id="step 3" data-track-ref="REG-16" required>
+            <input type="text" id="field.streetNo" name="address" data-track-name="streetNo"  data-track-object="field" data-track-id="step 3" data-track-ref="REG-16" required>
             <label for="address">Street Name:</label>
-            <input type="text" id="field.streetName" name="address" data-track-name="streetName" data-track-container="register" data-track-object="field" data-track-id="step 3" data-track-ref="REG-17" required>
+            <input type="text" id="field.streetName" name="address" data-track-name="streetName"  data-track-object="field" data-track-id="step 3" data-track-ref="REG-17" required>
             <label for="address">Additional:</label>
-            <input type="text" id="field.additionalInfo" name="address" data-track-name="additionalInfo" data-track-container="register" data-track-object="field" data-track-id="step 3" data-track-ref="REG-18" required>
+            <input type="text" id="field.additionalInfo" name="address" data-track-name="additionalInfo"  data-track-object="field" data-track-id="step 3" data-track-ref="REG-18" required>
             <label for="address">City:</label>
-            <input type="text" id="field.city" name="address" data-track-name="city" data-track-container="register" data-track-object="field" data-track-id="step 3" data-track-ref="REG-19" required>
+            <input type="text" id="field.city" name="address" data-track-name="city"  data-track-object="field" data-track-id="step 3" data-track-ref="REG-19" required>
             <label for="address">Zip Code:</label>
-            <input type="text" id="field.postcode" name="address" data-track-name="postcode" data-track-container="register" data-track-object="field" data-track-id="step 3" data-track-ref="REG-20" required>
+            <input type="text" id="field.postcode" name="address" data-track-name="postcode"  data-track-object="field" data-track-id="step 3" data-track-ref="REG-20" required>
             <label for="address">State:</label>
-            <input type="text" id="field.state" name="address" data-track-name="state" data-track-container="register" data-track-object="field" data-track-id="step 3" data-track-ref="REG-21" required>
+            <input type="text" id="field.state" name="address" data-track-name="state"  data-track-object="field" data-track-id="step 3" data-track-ref="REG-21" required>
             <label for="address">Country:</label>
-            <input type="text" id="field.country" name="address" data-track-name="country" data-track-container="register" data-track-object="field" data-track-id="step 3" data-track-ref="REG-22" required>
-            <button id="button.step_3.back" type="button" onclick="prevStep(3)" data-track-container="register" data-track-object="button" data-track-name="back" data-track-id="step 3" data-track-ref="REG-23" >Back</button>
-            <button id="button.step_3.next" type="button" onclick="nextStep(3)" data-track-container="register" data-track-object="button" data-track-name="next" data-track-id="step 3" data-track-ref="REG-24" >Next</button>
+            <input type="text" id="field.country" name="address" data-track-name="country"  data-track-object="field" data-track-id="step 3" data-track-ref="REG-22" required>
+            <button id="button.step_3.back" type="button" onclick="prevStep(3)"  data-track-object="button" data-track-name="back" data-track-id="step 3" data-track-ref="REG-23" >Back</button>
+            <button id="button.step_3.next" type="button" onclick="nextStep(3)"  data-track-object="button" data-track-name="next" data-track-id="step 3" data-track-ref="REG-24" >Next</button>
         </div>
         <div class="form-step" id="step-4">
             <h2>Step 4: Credentials</h2>
             <label for="email">Email:</label>
-            <input type="email" id="field.email" name="email" data-track-name="email" data-track-container="register" data-track-object="field" data-track-id="step 4" data-track-ref="REG-26" required>
+            <input type="email" id="field.email" name="email" data-track-name="email"  data-track-object="field" data-track-id="step 4" data-track-ref="REG-26" required>
             <label for="password">Password:</label>
-            <input type="password" id="field.password" name="password" data-track-name="password" data-track-container="register" data-track-object="field" data-track-id="step 4" data-track-ref="REG-27" required>
+            <input type="password" id="field.password" name="password" data-track-name="password"  data-track-object="field" data-track-id="step 4" data-track-ref="REG-27" required>
       
-            <a id="link.facebook" class="page-link" href="#" data-track-container="header" data-track-object="link" data-track-name="termsAndConditions" data-track-id="step 4"  data-track-category="information" data-track-ref="REG-30">Terms and Conditons</a>
-            <a id="link.twitter" class="page-link" href="#" data-track-container="header" data-track-object="link" data-track-name="privacyPolicy" data-track-id="step 4"  data-track-category="information" data-track-ref="REG-31">Privacy Policy</a>
+            <a id="link.facebook" class="page-link" href="#" data-track-object="link" data-track-name="termsAndConditions" data-track-id="step 4"  data-track-category="information" data-track-ref="REG-30">Terms and Conditons</a>
+            <a id="link.twitter" class="page-link" href="#" data-track-object="link" data-track-name="privacyPolicy" data-track-id="step 4"  data-track-category="information" data-track-ref="REG-31">Privacy Policy</a>
             </br></br>
       
-         <button id="button.step_4.back" type="button" onclick="prevStep(4)" data-track-container="register" data-track-object="button" data-track-name="back" data-track-category="step 4" >Back</button>
-         <button id="button.submit" type="button" onclick="submitForm()" data-track-container="register" data-track-object="button" data-track-name="submit" data-track-outcome="success" data-track-category="step 4" >Create Account (UI Success)</button>
-         <button id="button.submit" type="button" onclick="" data-track-container="register" data-track-object="button" data-track-name="submit" data-track-outcome="failure" data-track-category="step 4" >Create Account (UI Failure)</button> 
+         <button id="button.step_4.back" type="button" onclick="prevStep(4)" data-track-object="button" data-track-name="back" data-track-category="step 4" >Back</button>
+         <button id="button.submit" type="button" onclick="submitForm()" data-track-object="button" data-track-name="submit" data-track-outcome="success" data-track-category="step 4" >Create Account (UI Success)</button>
+         <button id="button.submit" type="button" onclick="" data-track-object="button" data-track-name="submit" data-track-outcome="failure" data-track-category="step 4" >Create Account (UI Failure)</button> 
       </div>
     </form>
 </div>    
