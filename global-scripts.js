@@ -169,5 +169,72 @@ function amp(event,payload){
     amplitude.track(event, payload);
 }
 
+// Global variables
+let currentStep = 1;
 
+// Functions
+function nextStep(step) {
+    updateStep(step, step + 1);
+}
+
+function prevStep(step) {
+    updateStep(step, step - 1);
+}
+
+function updateStep(currentStep, nextStep) {
+    document.getElementById(`step-${currentStep}`).classList.remove('active');
+    document.getElementById(`step-${nextStep}`).classList.add('active');
+    updateProgressBar(nextStep);
+
+    // Tracking
+    const event_properties = {
+        'Id': 'register',
+        'Action': 'displayed',
+        'Id': 'step ' + nextStep,
+        'Domain': Domain
+    };
+    amplitude.track('Registration', event_properties);
+}
+
+
+
+
+function updateProgressBar(step) {
+    const progressBarInner = document.querySelector('.progress-bar-inner');
+    const fillPercentage = Math.min((step - 1) / 4 * 100, 100);
+    progressBarInner.style.width = `${fillPercentage}%`;
+}
+
+function submitForm() {
+    const event_properties = {};
+
+    // Simulate form submission outcome
+    const randomNumber = Math.floor(Math.random() * 100) + 1;
+    if (randomNumber < 34) {
+        event_properties.Outcome = 'failure';
+        const errors = ['Duplicate_Account', 'System_Unavailable', 'Fraud', 'Network_Issue'];
+        const randomErrorIndex = Math.floor(Math.random() * errors.length);
+        event_properties.Error = errors[randomErrorIndex];
+        alert('Registration Failure');
+    } else {
+        event_properties.Outcome = 'success';
+        const statuses = ['verified', 'unverified'];
+        const randomStatusIndex = Math.floor(Math.random() * statuses.length);
+        event_properties.Status = statuses[randomStatusIndex];
+        alert('Registration Success');
+    }
+
+    // Tracking
+    event_properties['Name'] = 'outcome';
+    event_properties['Domain'] = Domain;
+    event_properties['Feature'] = Feature;
+    amplitude.track('outcome', event_properties);
+
+    // Redirect
+    // window.location.href = "confirmation.html" + window.location.search;
+}
+
+function redirectTo(url) {
+    window.location.href = url + window.location.search;
+}
  
