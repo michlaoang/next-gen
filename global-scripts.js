@@ -54,7 +54,10 @@ document.addEventListener('focusin', function(event) {
 function trackLinkClick(event) {
     var target = event.target;
     if (target.tagName === 'A' && target.hasAttribute('data-track-name')) {
+        
         var trackContainer = target.getAttribute('data-track-container') || '';
+        var trackId = target.getAttribute('data-track-id') || '';
+        var trackRef = target.getAttribute('data-track-ref') || '';
         var trackObject = target.getAttribute('data-track-object') || '';
         var trackName = target.getAttribute('data-track-name');
         var trackValue = target.getAttribute('data-track-value') || '';
@@ -68,6 +71,8 @@ function trackLinkClick(event) {
 
         // Construct event properties object
         var event_properties = {
+            Action: 'click',
+            Ref: trackRef,
             Name: trackName,
             Container: trackContainer,
             Object: trackObject,
@@ -82,9 +87,8 @@ function trackLinkClick(event) {
         };
 
         // Fire amplitude tracking with 'click' event type
-        event_properties['Feature'] = Feature;
         event_properties['Domain'] = Domain;
-        amp('click', event_properties);
+        amp('Registration', event_properties);
     }
 }
 
