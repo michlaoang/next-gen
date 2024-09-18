@@ -7,6 +7,8 @@ function trackOnFieldFocus(event) {
         // Extract attributes prefixed with "data-track-name"
 
         var trackContainer = target.getAttribute('data-track-container') || '';
+        var trackId = target.getAttribute('data-track-id') || '';
+        var trackRef = target.getAttribute('data-track-ref') || '';
         var trackObject = target.getAttribute('data-track-object') || '';
         var trackName = target.getAttribute('data-track-name');
         var trackValue = target.getAttribute('data-track-value') || '';
@@ -20,6 +22,9 @@ function trackOnFieldFocus(event) {
 
         // Construct event properties object
         var event_properties = {
+            Action: 'click',
+            Id: trackId,
+            Ref: trackRef,
             Name: trackName,
             Container: trackContainer,
             Object: trackObject,
@@ -34,7 +39,6 @@ function trackOnFieldFocus(event) {
         };
 
         // Fire amplitude tracking with 'focus' event type
-        event_properties['Feature'] = Feature;
         event_properties['Domain'] = Domain;
         event_properties['Value'] = 'firstfocusin';
         amp(Feature, event_properties);
@@ -72,6 +76,7 @@ function trackLinkClick(event) {
         // Construct event properties object
         var event_properties = {
             Action: 'click',
+            Id: trackId,
             Ref: trackRef,
             Name: trackName,
             Container: trackContainer,
@@ -103,6 +108,8 @@ links.forEach(function(link) {
 function trackButtonClick(event) {
     var target = event.target;
     if (target.tagName === 'BUTTON' && target.hasAttribute('data-track-name')) {
+        var trackId = target.getAttribute('data-track-id') || '';
+        var trackRef = target.getAttribute('data-track-ref') || '';
         var trackContainer = target.getAttribute('data-track-container') || '';
         var trackObject = target.getAttribute('data-track-object') || '';
         var trackName = target.getAttribute('data-track-name');
@@ -117,6 +124,9 @@ function trackButtonClick(event) {
 
         // Construct event properties object
         var event_properties = {
+            Action: 'click',
+            Id: trackId,
+            Ref: trackRef,
             Name: trackName,
             Container: trackContainer,
             Object: trackObject,
@@ -133,7 +143,7 @@ function trackButtonClick(event) {
         // Fire amplitude tracking with 'click' event type
         event_properties['Feature'] = Feature;
         event_properties['Domain'] = Domain;
-        amp('click', event_properties);
+        amp(Feature, event_properties);
     }
 }
 
