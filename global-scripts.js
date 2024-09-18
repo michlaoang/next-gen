@@ -88,7 +88,7 @@ function trackLinkClick(event) {
 
         // Fire amplitude tracking with 'click' event type
         event_properties['Domain'] = Domain;
-        amp('Registration', event_properties);
+        amp(Feature, event_properties);
     }
 }
 
