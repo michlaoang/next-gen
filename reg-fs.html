@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+
+    
+<title>Registration v1.15</title>
+<link rel="stylesheet" type="text/css" href="global-styles.css">
+<script src="header-script.js"></script>    
+
+
+<script>
+window['_fs_host'] = 'fullstory.com';
+window['_fs_script'] = 'edge.fullstory.com/s/fs.js';
+window['_fs_org'] = 'o-21GE1K-na1';
+window['_fs_namespace'] = 'FS';
+!function(m,n,e,t,l,o,g,y){var s,f,a=function(h){
+return!(h in m)||(m.console&&m.console.log&&m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].'),!1)}(e)
+;function p(b){var h,d=[];function j(){h&&(d.forEach((function(b){var d;try{d=b[h[0]]&&b[h[0]](h[1])}catch(h){return void(b[3]&&b[3](h))}
+d&&d.then?d.then(b[2],b[3]):b[2]&&b[2](d)})),d.length=0)}function r(b){return function(d){h||(h=[b,d],j())}}return b(r(0),r(1)),{
+then:function(b,h){return p((function(r,i){d.push([b,h,r,i]),j()}))}}}a&&(g=m[e]=function(){var b=function(b,d,j,r){function i(i,c){
+h(b,d,j,i,c,r)}r=r||2;var c,u=/Async$/;return u.test(b)?(b=b.replace(u,""),"function"==typeof Promise?new Promise(i):p(i)):h(b,d,j,c,c,r)}
+;function h(h,d,j,r,i,c){return b._api?b._api(h,d,j,r,i,c):(b.q&&b.q.push([h,d,j,r,i,c]),null)}return b.q=[],b}(),y=function(b){function h(h){
+"function"==typeof h[4]&&h[4](new Error(b))}var d=g.q;if(d){for(var j=0;j<d.length;j++)h(d[j]);d.length=0,d.push=h}},function(){
+(o=n.createElement(t)).async=!0,o.crossOrigin="anonymous",o.src="https://"+l,o.onerror=function(){y("Error loading "+l)}
+;var b=n.getElementsByTagName(t)[0];b&&b.parentNode?b.parentNode.insertBefore(o,b):n.head.appendChild(o)}(),function(){function b(){}
+function h(b,h,d){g(b,h,d,1)}function d(b,d,j){h("setProperties",{type:b,properties:d},j)}function j(b,h){d("user",b,h)}function r(b,h,d){j({
+uid:b},d),h&&j(h,d)}g.identify=r,g.setUserVars=j,g.identifyAccount=b,g.clearUserCookie=b,g.setVars=d,g.event=function(b,d,j){h("trackEvent",{
+name:b,properties:d},j)},g.anonymize=function(){r(!1)},g.shutdown=function(){h("shutdown")},g.restart=function(){h("restart")},
+g.log=function(b,d){h("log",{level:b,msg:d})},g.consent=function(b){h("setIdentity",{consent:!arguments.length||b})}}(),s="fetch",
+f="XMLHttpRequest",g._w={},g._w[f]=m[f],g._w[s]=m[s],m[s]&&(m[s]=function(){return g._w[s].apply(this,arguments)}),g._v="2.0.0")
+}(window,document,window._fs_namespace,"script",window._fs_script);
+</script>
+    
+</head>
+<body>
+
+<!-- HEADER -->    
+<div id="main" feature="registration">
+    
+<div class="header">
+    <div class="header-links">
+        <a id="link.login" class="header-link" href="#" data-track-catgeory="navigation" data-track-object="link" data-track-name="login" data-track-ref="REG-03" >Log In</a>
+        <a id="link.close" class="header-link" href="#" data-track-catgeory="navigation" data-track-object="link" data-track-name="close" data-track-ref="REG-02" >Close</a>
+    </div>
+</div>
+
+<!-- PROGRESS BAR -->    
+<div class="progress-bar">
+    <div class="progress-bar-inner" style="width: 0;"></div>
+</div>
+
+<!-- INPUT FORM -->
+<div class="form-container" >
+    <form id="register" action="submit_registration.php" method="post">
+        
+        <div class="form-step active" id="step-1">
+            <h2>Step 1: Personal Information</h2>
+            <label for="first-name">First Name:</label>
+            <input type="text" id="field.firstname" name="first-name" data-track-name="firstname" data-track-object="field" data-track-id="step 1" data-track-ref="REG-04" required>
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="field.lastname" name="last-name" data-track-name="lastname" data-track-object="field" data-track-id="step 1" data-track-ref="REG-05" required>
+            <button id="button.step_1.next" type="button" onclick="nextStep(1)" data-track-object="button" data-track-name="next" data-track-category="step 1" data-track-ref="REG-06" >Next</button>
+        </div>
+      
+         <div class="form-step" id="step-2">
+            <h2>Step 2: Personal Information</h2>
+            <label for="countryCode">Country Code:</label>
+            <input type="text" id="field.countryCode" name="dob" data-track-name="countryCode" data-track-object="field" data-track-id="step 2" data-track-ref="REG-09" required> 
+            <label for="mobile">Mobile Phone:</label>
+            <input type="text" id="field.mobilePhone" name="dob" data-track-name="mobilePhone" data-track-object="field" data-track-id="step 2" data-track-ref="REG-10" required>
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="field.dob" name="dob" data-track-name="dob" data-track-object="field" data-track-id="step 2" data-track-ref="REG-11" required>
+            <button id="button.step_2.back" type="button" onclick="prevStep(2)"  data-track-object="button" data-track-name="back" data-track-id="step 2" data-track-ref="REG-12" >Back</button>
+            <button id="button.step_2.next" type="button" onclick="nextStep(2)"  data-track-object="button" data-track-name="next" data-track-id="step 2" data-track-ref="REG-13" >Next</button>
+        </div>
+      
+        <div class="form-step" id="step-3">
+            <h2>Step 3: Address Information</h2>
+            <label for="address">Address:</label>
+            <input type="text" id="field.address" name="address" data-track-name="autoCompleteAddress"  data-track-object="field" data-track-id="step 3" data-track-ref="REG-15" required>
+            <label for="address">Number:</label>
+            <input type="text" id="field.streetNo" name="address" data-track-name="streetNo"  data-track-object="field" data-track-id="step 3" data-track-ref="REG-16" required>
+            <label for="address">Street Name:</label>
+            <input type="text" id="field.streetName" name="address" data-track-name="streetName"  data-track-object="field" data-track-id="step 3" data-track-ref="REG-17" required>
+            <label for="address">Additional:</label>
+            <input type="text" id="field.additionalInfo" name="address" data-track-name="additionalInfo"  data-track-object="field" data-track-id="step 3" data-track-ref="REG-18" required>
+            <label for="address">City:</label>
+            <input type="text" id="field.city" name="address" data-track-name="city"  data-track-object="field" data-track-id="step 3" data-track-ref="REG-19" required>
+            <label for="address">Zip Code:</label>
+            <input type="text" id="field.postcode" name="address" data-track-name="postcode"  data-track-object="field" data-track-id="step 3" data-track-ref="REG-20" required>
+            <label for="address">State:</label>
+            <input type="text" id="field.state" name="address" data-track-name="state"  data-track-object="field" data-track-id="step 3" data-track-ref="REG-21" required>
+            <label for="address">Country:</label>
+            <input type="text" id="field.country" name="address" data-track-name="country"  data-track-object="field" data-track-id="step 3" data-track-ref="REG-22" required>
+            <button id="button.step_3.back" type="button" onclick="prevStep(3)"  data-track-object="button" data-track-name="back" data-track-id="step 3" data-track-ref="REG-23" >Back</button>
+            <button id="button.step_3.next" type="button" onclick="nextStep(3)"  data-track-object="button" data-track-name="next" data-track-id="step 3" data-track-ref="REG-24" >Next</button>
+        </div>
+      
+        <div class="form-step" id="step-4">
+            <h2>Step 4: Credentials</h2>
+            <label for="email">Email:</label>
+            <input type="email" id="field.email" name="email" data-track-name="email"  data-track-object="field" data-track-id="step 4" data-track-ref="REG-26" required>
+            <label for="password">Password:</label>
+            <input type="password" id="field.password" name="password" data-track-name="password"  data-track-object="field" data-track-id="step 4" data-track-ref="REG-27" required>
+      
+            <a id="link.facebook" class="page-link" href="#" data-track-object="link" data-track-name="termsAndConditions" data-track-id="step 4"  data-track-category="information" data-track-ref="REG-30">Terms and Conditons</a>
+            <a id="link.twitter" class="page-link" href="#" data-track-object="link" data-track-name="privacyPolicy" data-track-id="step 4"  data-track-category="information" data-track-ref="REG-31">Privacy Policy</a>
+            </br></br>
+      
+         <button id="button.step_4.back" type="button" onclick="prevStep(4)" data-track-object="button" data-track-name="back" data-track-category="step 4" >Back</button>
+         <button id="button.submit" type="button" onclick="submitForm()" data-track-object="button" data-track-name="submit" data-track-outcome="success" data-track-id="step 4" data-track-ref="REG-34" data-track-method="frontend" >Register (UI Success)</button>
+         <button id="button.submit" type="button" onclick="" data-track-object="button" data-track-name="submit" data-track-outcome="failure" data-track-id="step 4" data-track-ref="REG-33" data-track-method="frontend">Register (UI Failure)</button>
+      </div>
+      
+    </form>
+</div>    
+
+</div>
+<script src="global-scripts.js"></script>
+</body>
+</html>
