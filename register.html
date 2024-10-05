@@ -40,9 +40,9 @@ f="XMLHttpRequest",g._w={},g._w[f]=m[f],g._w[s]=m[s],m[s]&&(m[s]=function(){retu
 <div id="main" data-tracking-feature="registration">
     
 <div class="header">
-    <div class="header-links" data-track-catgeory="navigation">
-        <a id="link.login" class="header-link" href="#"  data-tracking-name="login" >Log In</a>
-        <a id="link.close" class="header-link" href="#"  data-tracking-name="close" >Close</a>
+    <div class="header-links" data-tracking-catgeory="navigation">
+        <a id="link.login" class="header-link" href="#"  data-tracking-link="login" >Log In</a>
+        <a id="link.close" class="header-link" href="#"  data-tracking-link="close" >Close</a>
     </div>
 </div>
 
@@ -55,63 +55,63 @@ f="XMLHttpRequest",g._w={},g._w[f]=m[f],g._w[s]=m[s],m[s]&&(m[s]=function(){retu
 <div class="form-container" >
     <form id="register" action="submit_registration.php" method="post">
         
-        <div class="form-step active" id="step-1" data-tracking-name="step1">
+        <div class="form-step active" id="step-1" data-tracking-step="step1">
             <h2>Step 1: Personal Information</h2>
             <label for="first-name">First Name:</label>
-            <input type="text" id="field.firstname" data-tracking-name="firstname" required>
+            <input type="text" id="field.firstname" data-tracking-field="firstname" required>
             <label for="last-name">Last Name:</label>
-            <input type="text" id="field.lastname" data-tracking-name="lastname"  required>
+            <input type="text" id="field.lastname" data-tracking-field="lastname"  required>
             <button id="button.step_1.next" type="button" onclick="nextStep(1)" data-tracking-name="next" >Next</button>
         </div>
       
-         <div class="form-step" id="step-2" data-tracking-name="step2">
+         <div class="form-step" id="step-2" data-tracking-step="step2">
             <h2>Step 2: Personal Information</h2>
             <label for="countryCode">Country Code:</label>
-            <input type="text" id="field.countryCode" data-tracking-name="countryCode" required> 
+            <input type="text" id="field.countryCode" data-tracking-field="countryCode" required> 
             <label for="mobile">Mobile Phone:</label>
-            <input type="text" id="field.mobilePhone" data-tracking-name="mobilePhone" required>
+            <input type="text" id="field.mobilePhone" data-tracking-field="mobilePhone" required>
             <label for="dob">Date of Birth:</label>
-            <input type="date" id="field.dob" data-tracking-name="dob" required>
-            <button id="button.step_2.back" type="button" onclick="prevStep(2)" data-tracking-name="back"  >Back</button>
-            <button id="button.step_2.next" type="button" onclick="nextStep(2)" data-tracking-name="next"  >Next</button>
+            <input type="date" id="field.dob" data-tracking-field="dob" required>
+            <button id="button.step_2.back" type="button" onclick="prevStep(2)" data-tracking-button="back"  >Back</button>
+            <button id="button.step_2.next" type="button" onclick="nextStep(2)" data-tracking-button="next"  >Next</button>
         </div>
       
-        <div class="form-step" id="step-3" data-tracking-name="step3">
+        <div class="form-step" id="step-3" data-tracking-step="step3">
             <h2>Step 3: Address Information</h2>
             <label for="address">Address:</label>
-            <input type="text" id="field.address" data-tracking-name="autoCompleteAddress" required>
+            <input type="text" id="field.address" data-tracking-field="autoCompleteAddress" required>
             <label for="address">Number:</label>
-            <input type="text" id="field.streetNo" data-tracking-name="streetNo"   required>
+            <input type="text" id="field.streetNo" data-tracking-field="streetNo"   required>
             <label for="address">Street Name:</label>
-            <input type="text" id="field.streetName" data-tracking-name="streetName" required>
+            <input type="text" id="field.streetName" data-tracking-field="streetName" required>
             <label for="address">Additional:</label>
-            <input type="text" id="field.additionalInfo" data-tracking-name="additionalInfo" required>
+            <input type="text" id="field.additionalInfo" data-tracking-field="additionalInfo" required>
             <label for="address">City:</label>
-            <input type="text" id="field.city" data-tracking-name="city" required>
+            <input type="text" id="field.city" data-tracking-field="city" required>
             <label for="address">Zip Code:</label>
-            <input type="text" id="field.postcode" data-tracking-name="postcode" required>
+            <input type="text" id="field.postcode" data-tracking-field="postcode" required>
             <label for="address">State:</label>
-            <input type="text" id="field.state" data-tracking-name="state required>
+            <input type="text" id="field.state" data-tracking-field="state required>
             <label for="address">Country:</label>
-            <input type="text" id="field.country" name="country"  required>
-            <button id="button.step_3.back" type="button" onclick="prevStep(3)" data-tracking-name="back" >Back</button>
-            <button id="button.step_3.next" type="button" onclick="nextStep(3)" data-tracking-name="next" >Next</button>
+            <input type="text" id="field.country" data-tracking-field="country"  required>
+            <button id="button.step_3.back" type="button" onclick="prevStep(3)" data-tracking-button="back" >Back</button>
+            <button id="button.step_3.next" type="button" onclick="nextStep(3)" data-tracking-button="next" >Next</button>
         </div>
       
-        <div class="form-step" id="step-4" data-tracking-name="step4">
+        <div class="form-step" id="step-4" data-tracking-step="step4">
             <h2>Step 4: Credentials</h2>
             <label for="email">Email:</label>
-            <input type="email" id="field.email" data-tracking-name="email" required>
+            <input type="email" id="field.email" data-tracking-field="email" required>
             <label for="password">Password:</label>
-            <input type="password" id="field.password" data-tracking-name="password" required>
+            <input type="password" id="field.password" data-tracking-field="password" required>
       
-            <a id="link.facebook" class="page-link" href="#" " data-tracking-name="termsAndConditions" >Terms and Conditons</a>
-            <a id="link.twitter" class="page-link" href="#"  data-tracking-name="privacyPolicy" >Privacy Policy</a>
+            <a id="link.facebook" class="page-link" href="#"  data-tracking-link="termsAndConditions" >Terms and Conditons</a>
+            <a id="link.twitter" class="page-link" href="#"  data-tracking-link="privacyPolicy" >Privacy Policy</a>
             </br></br>
       
-         <button id="button.step_4.back" type="button" onclick="prevStep(4)" data-tracking-name="back"  >Back</button>
-         <button id="button.submit" type="button" onclick="submitForm()"  data-tracking-name="submit" data-track-outcome="success" data-track-method="frontend" >Register (UI Success)</button>
-         <button id="button.submit" type="button" onclick="" data-tracking-name="submit" data-track-outcome="failure" data-track-method="frontend">Register (UI Failure)</button>
+         <button id="button.step_4.back" type="button" onclick="prevStep(4)" data-tracking-button="back"  >Back</button>
+         <button id="button.submit" type="button" onclick="submitForm()"  data-tracking-button="submit" data-tracking-outcome="success" data-tracking-method="frontend" >Register (UI Success)</button>
+         <button id="button.submit" type="button" onclick="" data-tracking-button="submit" data-tracking-outcome="failure" data-tracking-method="frontend">Register (UI Failure)</button>
       </div>
       
     </form>
