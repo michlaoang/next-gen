@@ -5,7 +5,7 @@
 
 
     
-<title>Registration v3</title>
+<title>Registration v4</title>
 <link rel="stylesheet" type="text/css" href="global-styles.css">
 <script src="header-script.js"></script>    
 
@@ -55,7 +55,7 @@ f="XMLHttpRequest",g._w={},g._w[f]=m[f],g._w[s]=m[s],m[s]&&(m[s]=function(){retu
 <div class="form-container" >
     <form id="register" action="submit_registration.php" method="post">
         
-        <div class="form-step active" id="step-1">
+        <div class="form-step active" id="step-1" data-tracking-name="step1">
             <h2>Step 1: Personal Information</h2>
             <label for="first-name">First Name:</label>
             <input type="text" id="field.firstname" data-tracking-name="firstname" required>
@@ -64,7 +64,7 @@ f="XMLHttpRequest",g._w={},g._w[f]=m[f],g._w[s]=m[s],m[s]&&(m[s]=function(){retu
             <button id="button.step_1.next" type="button" onclick="nextStep(1)" data-tracking-name="next" >Next</button>
         </div>
       
-         <div class="form-step" id="step-2" >
+         <div class="form-step" id="step-2" data-tracking-name="step2">
             <h2>Step 2: Personal Information</h2>
             <label for="countryCode">Country Code:</label>
             <input type="text" id="field.countryCode" data-tracking-name="countryCode" required> 
@@ -76,7 +76,7 @@ f="XMLHttpRequest",g._w={},g._w[f]=m[f],g._w[s]=m[s],m[s]&&(m[s]=function(){retu
             <button id="button.step_2.next" type="button" onclick="nextStep(2)" data-tracking-name="next"  >Next</button>
         </div>
       
-        <div class="form-step" id="step-3" >
+        <div class="form-step" id="step-3" data-tracking-name="step3">
             <h2>Step 3: Address Information</h2>
             <label for="address">Address:</label>
             <input type="text" id="field.address" data-tracking-name="autoCompleteAddress" required>
@@ -98,7 +98,7 @@ f="XMLHttpRequest",g._w={},g._w[f]=m[f],g._w[s]=m[s],m[s]&&(m[s]=function(){retu
             <button id="button.step_3.next" type="button" onclick="nextStep(3)" data-tracking-name="next" >Next</button>
         </div>
       
-        <div class="form-step" id="step-4" >
+        <div class="form-step" id="step-4" data-tracking-name="step4">
             <h2>Step 4: Credentials</h2>
             <label for="email">Email:</label>
             <input type="email" id="field.email" data-tracking-name="email" required>
