@@ -41,8 +41,8 @@ f="XMLHttpRequest",g._w={},g._w[f]=m[f],g._w[s]=m[s],m[s]&&(m[s]=function(){retu
     
 <div class="header">
     <div class="header-links" data-tracking-category="navigation">
-        <a id="link.register" class="header-link" href="register.html"  data-tracking-link="register" >Register</a>
-        <a id="link.close" class="header-link" href="#"  data-tracking-link="close" >Close</a>
+        <a id="link.register" class="header-link" href="register.html"  fs-field-label="register" >Register</a>
+        <a id="link.close" class="header-link" href="#"  fs-field-label="close" >Close</a>
     </div>
 </div>
 
@@ -57,16 +57,16 @@ f="XMLHttpRequest",g._w={},g._w[f]=m[f],g._w[s]=m[s],m[s]&&(m[s]=function(){retu
         <div class="form-step" id="step-1" >
             <h2>Log In Credentials</h2>
             <label for="field.email">Email:</label>
-            <input type="email" id="field.email" fs-field-name="email" required>
+            <input type="email" id="field.email" fs-field-label="email" required>
             <label for="field.password">Password:</label>
-            <input type="password" id="field.password" fs-field-name="password" required>
+            <input type="password" id="field.password" fs-field-label="password" required>
             <br>
-               <a id="link.recovery" class="link" href="reset.html"  data-tracking-link="recovery" >Forgotten Password</a>
+               <a id="link.recovery" class="link" href="reset.html"  fs-field-label="recovery" >Forgotten Password</a>
             <br>
                <br>
       
-         <button id="button.submit.success" type="submit" onclick="submitForm()"  data-tracking-button="submit" data-tracking-outcome="success" data-tracking-method="frontend" >Log in (UI Success)</button>
-         <button id="button.submit.failure" type="submit" onclick="" data-tracking-button="submit" data-tracking-outcome="failure" data-tracking-method="frontend">Log in (UI Failure)</button>
+         <button id="button.submit.success" type="submit" onclick="submitForm()"  fs-field-label="submit" data-tracking-outcome="success" data-tracking-method="frontend" >Log in (UI Success)</button>
+         <button id="button.submit.failure" type="submit" onclick="" fs-field-label="submit" data-tracking-outcome="failure" data-tracking-method="frontend">Log in (UI Failure)</button>
       </div>
       
     </form>
