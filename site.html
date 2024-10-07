@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .logo {
+            width: 100px; /* Adjust logo size */
+        }
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #333;
+        }
+        .search-bar {
+            margin-left: 20px;
+        }
+        .section {
+            padding: 20px;
+        }
+        .game-tile {
+            width: 100px; /* Adjust size of tiles */
+            height: 100px; /* Adjust size of tiles */
+            background-color: #e2e2e2;
+            margin: 10px;
+            display: inline-block;
+            text-align: center;
+            line-height: 100px; /* Center text vertically */
+            cursor: pointer;
+        }
+        footer {
+            display: flex;
+            justify-content: space-between;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+        footer div {
+            flex: 1;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .app-store {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="logo.png" alt="Logo" class="logo"> <!-- Replace with your logo -->
+    <div>
+        <button>Login</button>
+        <button>Register</button>
+    </div>
+</header>
+
+<nav class="nav">
+    <a href="#lotteries">Lotteries</a>
+    <a href="#live-casino">Live Casino</a>
+    <a href="#sportsbook">Sportsbook</a>
+    <input type="text" class="search-bar" placeholder="Search...">
+</nav>
+
+<div class="section" id="lotteries">
+    <h2>Lotteries</h2>
+    <div class="game-tile">Game 1</div>
+    <div class="game-tile">Game 2</div>
+    <div class="game-tile">Game 3</div>
+</div>
+
+<div class="section" id="live-casino">
+    <h2>Live Casino</h2>
+    <div class="game-tile">Game 4</div>
+    <div class="game-tile">Game 5</div>
+    <div class="game-tile">Game 6</div>
+</div>
+
+<div class="section" id="sportsbook">
+    <h2>Sportsbook</h2>
+    <div class="game-tile">Game 7</div>
+    <div class="game-tile">Game 8</div>
+    <div class="game-tile">Game 9</div>
+</div>
+
+<div class="app-store">
+    <h2>Download Our App</h2>
+    <a href="#"><img src="app-store.png" alt="App Store" width="150"></a> <!-- Replace with actual image -->
+    <a href="#"><img src="google-play.png" alt="Google Play" width="150"></a> <!-- Replace with actual image -->
+</div>
+
+<footer>
+    <div>
+        <h3>Lottery</h3>
+        <a href="#">Lottery Link 1</a><br>
+        <a href="#">Lottery Link 2</a><br>
+        <a href="#">Lottery Link 3</a><br>
+        <a href="#">Lottery Link 4</a><br>
+        <a href="#">Lottery Link 5</a><br>
+    </div>
+    <div>
+        <h3>Information</h3>
+        <a href="#">Info Link 1</a><br>
+        <a href="#">Info Link 2</a><br>
+        <a href="#">Info Link 3</a><br>
+        <a href="#">Info Link 4</a><br>
+        <a href="#">Info Link 5</a><br>
+    </div>
+    <div>
+        <h3>Contact</h3>
+        <a href="#">Contact Link 1</a><br>
+        <a href="#">Contact Link 2</a><br>
+        <a href="#">Contact Link 3</a><br>
+        <a href="#">Contact Link 4</a><br>
+        <a href="#">Contact Link 5</a><br>
+    </div>
+    <div>
+        <h3>Gamble Safely</h3>
+        <a href="#">Gamble Safely Link 1</a><br>
+        <a href="#">Gamble Safely Link 2</a><br>
+        <a href="#">Gamble Safely Link 3</a><br>
+        <a href="#">Gamble Safely Link 4</a><br>
+        <a href="#">Gamble Safely Link 5</a><br>
+    </div>
+    <div>
+        <h3>Country</h3>
+        <a href="#">Country Link 1</a><br>
+        <a href="#">Country Link 2</a><br>
+        <a href="#">Country Link 3</a><br>
+        <a href="#">Country Link 4</a><br>
+        <a href="#">Country Link 5</a><br>
+    </div>
+</footer>
+
+</body>
+</html>
