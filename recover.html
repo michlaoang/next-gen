@@ -33,9 +33,9 @@ f="XMLHttpRequest",g._w={},g._w[f]=m[f],g._w[s]=m[s],m[s]&&(m[s]=function(){retu
      <img src="./img/lottoland.png" alt="Logo" class="logo">
 <div id="main" data-tracking-feature="recovery">
     <div class="header">
-        <div class="header-links" fs-field-group="navigation">
-            <a id="link.register" class="header-link" href="login.html" fs-field-label="login">Login</a>
-            <a id="link.close" class="header-link" href="homepage.html" fs-field-label="close">Close</a>
+        <div class="header-links" data-track-group="navigation">
+            <a id="link.register" class="header-link" href="login.html" data-track-name="login">Login</a>
+            <a id="link.close" class="header-link" href="homepage.html" data-track-name="close">Close</a>
         </div>
     </div>
 
@@ -50,11 +50,11 @@ f="XMLHttpRequest",g._w={},g._w[f]=m[f],g._w[s]=m[s],m[s]&&(m[s]=function(){retu
             <div class="form-step" id="step-1">
                 <h2>Forgotten password - New Password</h2>
                 <label for="field.password">Password:</label>
-                <input type="password" id="field.password" fs-field-label="password" required>
+                <input type="password" id="field.password" data-track-name="password" required>
                 <br>
-                <a id="link.support" class="link" href="#" fs-field-label="support">Contact Support</a>
+                <a id="link.support" class="link" href="#" data-track-name="support">Contact Support</a>
                 <br><br>
-                <button id="button.submit.success" type="submit" onclick="submitForm(event)" fs-field-label="submit" data-tracking-outcome="success" data-tracking-method="frontend">Recovery Account</button>
+                <button id="button.submit.success" type="submit" onclick="submitForm(event)" data-track-name="submit" data-tracking-outcome="success" data-tracking-method="frontend">Recovery Account</button>
             </div>
         </form>
     </div>
