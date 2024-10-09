@@ -33,9 +33,9 @@ f="XMLHttpRequest",g._w={},g._w[f]=m[f],g._w[s]=m[s],m[s]&&(m[s]=function(){retu
      <img src="./img/lottoland.png" alt="Logo" class="logo">
 <div id="main" data-tracking-feature="recovery">
     <div class="header">
-        <div class="header-links" fs-field-group="navigation">
-            <a id="link.register" class="header-link" href="login.html" fs-field-label="login">Login</a>
-            <a id="link.close" class="header-link" href="homepage.html" fs-field-label="close">Close</a>
+        <div class="header-links" data-track-group="navigation">
+            <a id="link.register" class="header-link" href="login.html" data-track-name="login">Login</a>
+            <a id="link.close" class="header-link" href="homepage.html" data-track-name="close">Close</a>
         </div>
     </div>
 
@@ -50,11 +50,11 @@ f="XMLHttpRequest",g._w={},g._w[f]=m[f],g._w[s]=m[s],m[s]&&(m[s]=function(){retu
             <div class="form-step" id="step-1">
                 <h2>Forgotten password - Reset</h2>
                 <label for="field.email">Email:</label>
-                <input type="email" id="field.email" fs-field-label="email" required>
+                <input type="email" id="field.email" data-track-name="email" required>
                 <br>
-                <a id="link.support" class="link" href="#" fs-field-label="support">Contact Support</a>
+                <a id="link.support" class="link" href="#" data-track-name="support">Contact Support</a>
                 <br><br>
-                <button id="button.submit.success" type="submit" onclick="submitForm(event)"fs-field-label="submit" data-tracking-outcome="success" data-tracking-method="frontend">Send Reset Link</button>
+                <button id="button.submit.success" type="submit" onclick="submitForm(event)" data-track-name="submit" data-tracking-outcome="success" data-tracking-method="frontend">Send Reset Link</button>
             </div>
         </form>
     </div>
@@ -63,7 +63,7 @@ f="XMLHttpRequest",g._w={},g._w[f]=m[f],g._w[s]=m[s],m[s]&&(m[s]=function(){retu
     <div id="popup" class="popup">
         <span class="close" id="closePopup">&times;</span>
         <p>The link to reset your password has been sent to your mailbox.
-        <a id="link.recover" class="link" href="recover.html" fs-field-label="support">Open Email</a>
+        <a id="link.recover" class="link" href="recover.html" data-track-name="support">Open Email</a>
         </p>
     </div>
 </div>
