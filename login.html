@@ -55,16 +55,16 @@ f="XMLHttpRequest",g._w={},g._w[f]=m[f],g._w[s]=m[s],m[s]&&(m[s]=function(){retu
         <div class="form-step" id="step-1" >
             <h2>Log In Credentials</h2>
             <label for="field.email">Email:</label>
-            <input type="email" id="field.email" data-track-name="email" required>
+            <input type="email" id="field.email" data-track-name="email"  data-analytics-id="email" required>
             <label for="field.password">Password:</label>
-            <input type="password" id="field.password" data-track-name="password" required>
+            <input type="password" id="field.password" data-track-name="password" data-analytics-id="password" required>
             <br>
-               <a id="link.recovery" class="link" href="reset.html"  data-track-name"recovery" >Forgotten Password</a>
+               <a id="link.recovery" class="link" href="reset.html"  data-track-name"recovery" data-analytics-id="recovery">Forgotten Password</a>
             <br>
                <br>
       
-         <button id="button.submit.success" type="submit" onclick="submitForm()"  data-track-name="Log In" data-tracking-outcome="success" data-tracking-method="frontend" >Log in (UI Success)</button>
-         <button id="button.submit.failure" type="submit" onclick="" data-track-name="Log In" data-tracking-outcome="failure" data-tracking-method="frontend">Log in (UI Failure)</button>
+         <button id="button.submit.success" type="submit" onclick="submitForm()" data-analytics-id="login" data-track-name="Log In" data-tracking-outcome="success" data-tracking-method="frontend" >Log in (UI Success)</button>
+         <button id="button.submit.failure" type="submit" onclick="" data-analytics-id="login" data-track-name="Log In" data-tracking-outcome="failure" data-tracking-method="frontend">Log in (UI Failure)</button>
       </div>
       
     </form>
