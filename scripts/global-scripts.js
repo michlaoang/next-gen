@@ -40,7 +40,7 @@ function submitForm() {
         event_properties['Action'] = 'outcome';
         event_properties['Name'] = 'account';
         event_properties['Method'] = 'backend';
-        amplitude.track('Registration', event_properties);
+        //amplitude.track('Registration', event_properties);
 
     } else {
         alert('Registration Success');
@@ -53,7 +53,7 @@ function submitForm() {
         const statuses = ['verified', 'unverified'];
         const randomStatusIndex = Math.floor(Math.random() * statuses.length);
         event_properties.Status = statuses[randomStatusIndex];
-        amplitude.track('Registration', event_properties);
+        //amplitude.track('Registration', event_properties);
 
         // Fake Backend record
         const backend_properties = {};
