@@ -1,49 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head>
-
-
-
-    
-<title>Registration v2</title>
-<link rel="stylesheet" type="text/css" href="global-styles.css">
-<script src="header-script.js"></script>    
-
-
-<script>
-window['_fs_host'] = 'fullstory.com';
-window['_fs_script'] = 'edge.fullstory.com/s/fs.js';
-window['_fs_org'] = 'o-21MNYV-na1';
-window['_fs_namespace'] = 'FS';
-!function(m,n,e,t,l,o,g,y){var s,f,a=function(h){
-return!(h in m)||(m.console&&m.console.log&&m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].'),!1)}(e)
-;function p(b){var h,d=[];function j(){h&&(d.forEach((function(b){var d;try{d=b[h[0]]&&b[h[0]](h[1])}catch(h){return void(b[3]&&b[3](h))}
-d&&d.then?d.then(b[2],b[3]):b[2]&&b[2](d)})),d.length=0)}function r(b){return function(d){h||(h=[b,d],j())}}return b(r(0),r(1)),{
-then:function(b,h){return p((function(r,i){d.push([b,h,r,i]),j()}))}}}a&&(g=m[e]=function(){var b=function(b,d,j,r){function i(i,c){
-h(b,d,j,i,c,r)}r=r||2;var c,u=/Async$/;return u.test(b)?(b=b.replace(u,""),"function"==typeof Promise?new Promise(i):p(i)):h(b,d,j,c,c,r)}
-;function h(h,d,j,r,i,c){return b._api?b._api(h,d,j,r,i,c):(b.q&&b.q.push([h,d,j,r,i,c]),null)}return b.q=[],b}(),y=function(b){function h(h){
-"function"==typeof h[4]&&h[4](new Error(b))}var d=g.q;if(d){for(var j=0;j<d.length;j++)h(d[j]);d.length=0,d.push=h}},function(){
-(o=n.createElement(t)).async=!0,o.crossOrigin="anonymous",o.src="https://"+l,o.onerror=function(){y("Error loading "+l)}
-;var b=n.getElementsByTagName(t)[0];b&&b.parentNode?b.parentNode.insertBefore(o,b):n.head.appendChild(o)}(),function(){function b(){}
-function h(b,h,d){g(b,h,d,1)}function d(b,d,j){h("setProperties",{type:b,properties:d},j)}function j(b,h){d("user",b,h)}function r(b,h,d){j({
-uid:b},d),h&&j(h,d)}g.identify=r,g.setUserVars=j,g.identifyAccount=b,g.clearUserCookie=b,g.setVars=d,g.event=function(b,d,j){h("trackEvent",{
-name:b,properties:d},j)},g.anonymize=function(){r(!1)},g.shutdown=function(){h("shutdown")},g.restart=function(){h("restart")},
-g.log=function(b,d){h("log",{level:b,msg:d})},g.consent=function(b){h("setIdentity",{consent:!arguments.length||b})}}(),s="fetch",
-f="XMLHttpRequest",g._w={},g._w[f]=m[f],g._w[s]=m[s],m[s]&&(m[s]=function(){return g._w[s].apply(this,arguments)}),g._v="2.0.0")
-}(window,document,window._fs_namespace,"script",window._fs_script);
-</script>
-    
+<head> 
+   <title>Registration v2</title>
+   <link rel="stylesheet" href="./styles/global-styles.css">
+   <script src="./scripts/header-script.js" defer></script>    
 </head>
 <body>
 
-<!-- HEADER -->    
-     <img src="./img/lottoland.png" alt="Logo" class="logo">
-<div id="main" data-tracking-feature="registration">
-    
+<img src="./img/lottoland.png" alt="Logo" class="logo">
+<div id="main" data-analaytics-component="registration">
+
+<!-- HEADER -->       
 <div class="header">
-    <div class="header-links" data-tracking-category="navigation">
-        <a id="link.login" class="header-link" href="login.html"  data-track-name="login" >Log In</a>
-        <a id="link.close" class="header-link" href="homepage.html"  data-track-name="close" >Close</a>
+    <div class="header-links" data-analytics-section="navigation">
+        <a id="link.login" class="header-link" href="login.html"  data-analytics-name="login" >Log In</a>
+        <a id="link.close" class="header-link" href="homepage.html"  data-analytics-name="close" >Close</a>
     </div>
 </div>
 
@@ -53,10 +24,10 @@ f="XMLHttpRequest",g._w={},g._w[f]=m[f],g._w[s]=m[s],m[s]&&(m[s]=function(){retu
 </div>
 
 <!-- INPUT FORM -->
-<div class="form-container" >
+<div class="form-container" data-analytics=section="form' >
     <form id="register" action="submit_registration.php" method="post">
         
-        <div class="form-step active" id="step-1" data-track-group="step1">
+        <div class="form-step active" id="step-1" data-analytics-category="step1">
             <h2>Step 1: Personal Information</h2>
             <label for="field.firstname">First Name:</label>
             <input type="text" id="field.firstname" data-track-name="firstname" required>
@@ -65,60 +36,60 @@ f="XMLHttpRequest",g._w={},g._w[f]=m[f],g._w[s]=m[s],m[s]&&(m[s]=function(){retu
             <button id="button.step_1.next" type="button" onclick="nextStep(1)" data-track-name="next" >Next</button>
         </div>
       
-         <div class="form-step" id="step-2" data-track-group="step2">
+         <div class="form-step" id="step-2" data-analytics-catgory="step2">
             <h2>Step 2: Personal Information</h2>
             <label for="field.countryCode">Country Code:</label>
-            <input type="text" id="field.countryCode" data-track-name="countryCode" required> 
+            <input type="text" id="field.countryCode" data-analytics-name="countryCode" required> 
             <label for="field.mobilePhone">Mobile Phone:</label>
-            <input type="text" id="field.mobilePhone" data-track-name="mobilePhone" required>
+            <input type="text" id="field.mobilePhone" data-analytucs-name="mobilePhone" required>
             <label for="field.dob">Date of Birth:</label>
-            <input type="date" id="field.dob" data-track-name="dob" required>
-            <button id="button.step_2.back" type="button" onclick="prevStep(2)" data-track-name="back"  >Back</button>
-            <button id="button.step_2.next" type="button" onclick="nextStep(2)" data-track-name="next"  >Next</button>
+            <input type="date" id="field.dob" data-analytics-name="dob" required>
+            <button id="button.step_2.back" type="button" onclick="prevStep(2)" data-analytics-name="back"  >Back</button>
+            <button id="button.step_2.next" type="button" onclick="nextStep(2)" data-analytics-name="next"  >Next</button>
         </div>
       
-        <div class="form-step" id="step-3" data-track-group="step3">
+        <div class="form-step" id="step-3" data-analytics-catgeory="step3">
             <h2>Step 3: Address Information</h2>
             <label for="field.autoCompleteAddress">Address:</label>
-            <input type="text" id="field.address" data-track-name="autoCompleteAddress" required>
+            <input type="text" id="field.address" data-analytics-name="autoCompleteAddress" required>
             <label for="field.streetNo">Number:</label>
-            <input type="text" id="field.streetNo" data-track-name="streetNo"   required>
+            <input type="text" id="field.streetNo" data-analytics-name="streetNo"   required>
             <label for="field.streetName">Street Name:</label>
-            <input type="text" id="field.streetName" data-track-name="streetName" required>
+            <input type="text" id="field.streetName" data-analytics-name="streetName" required>
             <label for="field.additionalInfo">Additional:</label>
-            <input type="text" id="field.additionalInfo" data-track-name="additionalInfo" required>
+            <input type="text" id="field.additionalInfo" data-analytics-name="additionalInfo" required>
             <label for="field.city">City:</label>
-            <input type="text" id="field.city" data-track-name="city" required>
+            <input type="text" id="field.city" data-analytics-name="city" required>
             <label for="field.postcode">Zip Code:</label>
-            <input type="text" id="field.postcode" data-track-name="postcode" required>
+            <input type="text" id="field.postcode" data-analytics-name="postcode" required>
             <label for="field.state">State:</label>
-            <input type="text" id="field.state" data-track-name="state" required>
+            <input type="text" id="field.state" data-analytics-name="state" required>
             <label for="field.country">Country:</label>
-            <input type="text" id="field.country" data-track-name="country"  required>
-            <button id="button.step_3.back" type="button" onclick="prevStep(3)" data-track-name="back" >Back</button>
-            <button id="button.step_3.next" type="button" onclick="nextStep(3)" data-track-name="next" >Next</button>
+            <input type="text" id="field.country" data-analytics-name="country"  required>
+            <button id="button.step_3.back" type="button" onclick="prevStep(3)" data-analytics-name="back" >Back</button>
+            <button id="button.step_3.next" type="button" onclick="nextStep(3)" data-analytics-name="next" >Next</button>
         </div>
       
-        <div class="form-step" id="step-4" data-track-group="step4">
+        <div class="form-step" id="step-4" data-analytics-category="step4">
             <h2>Step 4: Credentials</h2>
             <label for="field.email">Email:</label>
-            <input type="email" id="field.email" data-track-name="email" required>
+            <input type="email" id="field.email" data-analytics-name="email" required>
             <label for="field.password">Password:</label>
-            <input type="password" id="field.password" data-track-name="password" required>
+            <input type="password" id="field.password" data-analytics-name="password" required>
       
-            <a id="link.facebook" class="page-link" href="#"  data-track-name="termsAndConditions" >Terms and Conditions</a>
-            <a id="link.twitter" class="page-link" href="#"  data-track-name="privacyPolicy" >Privacy Policy</a>
+            <a id="link.facebook" class="page-link" href="#"  data-analytics-name="termsAndConditions" >Terms and Conditions</a>
+            <a id="link.twitter" class="page-link" href="#"  data-analytics-name="privacyPolicy" >Privacy Policy</a>
             <br><br>
       
-         <button id="button.step_4.back" type="button" onclick="prevStep(4)" data-track-name="back"  >Back</button>
-         <button id="button.submit.success" type="submit" onclick="submitForm()"  data-track-name="Register" data-tracking-outcome="success" data-tracking-method="frontend" >Register (UI Success)</button>
-         <button id="button.submit.failure" type="submit" onclick="" data-track-name="Register" data-tracking-outcome="failure" data-tracking-method="frontend">Register (UI Failure)</button>
+         <button id="button.step_4.back" type="button" onclick="prevStep(4)" data-analytics-name="back"  >Back</button>
+         <button id="button.submit.success" type="submit" onclick="submitForm()"  data-analytics-name="Register" data-analytics-outcome="success" data-analytics-method="frontend" >Register (UI Success)</button>
+         <button id="button.submit.failure" type="submit" onclick="" data-analytics-name="Register" data-analytics-outcome="failure" data-analytics-method="frontend">Register (UI Failure)</button>
       </div>
       
     </form>
 </div>    
 
 </div>
-<script src="global-scripts.js"></script>
+<script src="./scripts/global-scripts.js"></script>
 </body>
 </html>
