@@ -1,155 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="./styles/global-styles.css">
-    <script src="./scripts/header-script.js" defer></script>  
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage v9</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
-    <style>
-      
-     
-        .nav {
-            display: flex;
-            gap: 20px;
-        }
-        .nav a {
-            text-decoration: none;
-            color: #333;
-        }
-        .search-bar {
-            margin-left: 20px;
-           width: 600px;
-        }
-        .section {
-            padding: 20px;
-        }
-        .game-tile {
-            width: 200px; /* Adjust size of tiles */
-            height: 200px; /* Adjust size of tiles */
-            background-color: #e2e2e2;
-            margin: 10px;
-            display: inline-block;
-            text-align: center;
-            line-height: 100px; /* Center text vertically */
-            cursor: pointer;
-        }
-        footer {
-            display: flex;
-            justify-content: space-between;
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-        }
-        footer div {
-            flex: 1;
-        }
-        footer a {
-            color: #fff;
-            text-decoration: none;
-        }
-        .app-store {
-            margin-top: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="./styles/global-styles.css">
+    <script src="./scripts/header-script.js" defer></script>
 </head>
 <body>
 
-<header>
-    <img src="./img/lottoland.png" alt="Logo" class="logo"> <!-- Replace with your logo -->
-    <div>
-        <button onclick="window.location.href='login.html'">Login</button>
-        <button onclick="window.location.href='register.html'">Register</button>
-    </div>
-</header>
-<hr>
-<nav class="nav" data-tracking-name="primary" data-analytics-section="primary">
-    <a href="#lotteries">Lotteries</a>
-    <a href="#casino">Casino</a>
-    <a href="#live-casino">Live Casino</a>
-    <a href="#sportsbook">Sportsbook</a>
-    <a href="#promotions">Promotions</a>
-    <a href="#scratchcards">Scratchcards</a>
-    <a href="#bingo">Bingo</a>
-    
-</nav>
-    <div data-analytics-section="search">
-<hr>
-    <input type="text" class="search-bar" placeholder="Search...">
-<hr>
+<div data-analytics-component="homepage">
+    <header>
+        <img src="./img/lottoland.png" alt="Logo" class="logo">
+        <div data-analytics-section="header">
+            <button onclick="window.location.href='login.html'" data-analytics-name="login">Login</button>
+            <button onclick="window.location.href='register.html'" data-analytics-name="register">Register</button>
         </div>
+    </header>
     
-<div class="section" id="lotteries">
-    <h2>Lotteries</h2>
-    <div class="game-tile">Irish Lotto</div>
-    <div class="game-tile">Euro Millions</div>
-    <div class="game-tile">Mega Millions</div>
-</div>
+    <hr>
+    
+    <nav class="nav" data-analytics-section="primaryNavigation">
+        <a href="#lotteries" data-analytics-name="Lotteries">Lotteries</a>
+        <a href="#casino" data-analytics-name="Casino">Casino</a>
+        <a href="#live-casino" data-analytics-name="Live Casino">Live Casino</a>
+        <a href="#sportsbook" data-analytics-name="Sportsbook">Sportsbook</a>
+        <a href="#promotions" data-analytics-name="Promotions">Promotions</a>
+        <a href="#scratchcards" data-analytics-name="Scratchcards">Scratchcards</a>
+        <a href="#bingo" data-analytics-name="Bingo">Bingo</a>
+    </nav>
+    
+    <div data-analytics-section="search">
+        <hr>
+        <input type="text" class="search-bar" data-analytics-name="Search" placeholder="Search...">
+        <hr>
+    </div>
 
-<div class="section" id="live-casino">
-    <h2>Live Casino</h2>
-    <div class="game-tile">Big Bass Splash</div>
-    <div class="game-tile">Starburst</div>
-    <div class="game-tile">Fishing Frenzy</div>
-</div>
+    <div class="section" id="lotteries" data-analytics-section="Lotteries">
+        <h2>Lotteries</h2>
+        <div class="game-tile">Irish Lotto</div>
+        <div class="game-tile">Euro Millions</div>
+        <div class="game-tile">Mega Millions</div>
+    </div>
 
-<div class="section" id="sportsbook">
-    <h2>Sportsbook</h2>
-    <div class="game-tile">Football</div>
-    <div class="game-tile">Rugby</div>
-    <div class="game-tile">Tennis</div>
-</div>
+    <div class="section" id="live-casino" data-analytics-section="Live Casino">
+        <h2>Live Casino</h2>
+        <div class="game-tile">Big Bass Splash</div>
+        <div class="game-tile">Starburst</div>
+        <div class="game-tile">Fishing Frenzy</div>
+    </div>
 
-    <div data-analytics-section="stores">
+    <div class="section" id="sportsbook" data-analytics-section="Sportsbook">
+        <h2>Sportsbook</h2>
+        <div class="game-tile">Football</div>
+        <div class="game-tile">Rugby</div>
+        <div class="game-tile">Tennis</div>
+    </div>
 
-<div class="app-store">
-    <h2>Download Our App</h2>
-    <a href="#"><img src="./img/apple.png" alt="App Store" width="150"></a> <!-- Replace with actual image -->
-    <a href="#"><img src="./img/android.png" alt="Google Play" width="150"></a> <!-- Replace with actual image -->
-</div>
+    <div class="app-store" data-analytics-section="Stores">
+        <h2>Download Our App</h2>
+        <a href="#" data-analytics-name="apple"><img src="./img/apple.png" alt="App Store" width="150"></a>
+        <a href="#" data-analytics-name="android"><img src="./img/android.png" alt="Google Play" width="150"></a>
     </div>
 </div>
-    
+
 <footer data-tracking-name="footer" data-analytics-section="footer">
-    <div>
+    <div data-analytics-category="lottery">
         <h3>Lottery</h3>
-        <a href="#">Lottery Results</a><br>
-        <a href="#">Jackpots</a><br>
-        <a href="#">Promotions</a><br>
-        <a href="#">Lotto Comparison</a><br>
-        <a href="#">Lottoland Syndicates</a><br>
+        <a href="#" data-analytics-name="Lottery Results">Lottery Results</a><br>
+        <a href="#" data-analytics-name="Jackpots">Jackpots</a><br>
+        <a href="#" data-analytics-name="Promotions">Promotions</a><br>
+        <a href="#" data-analytics-name="Lotto Comparison">Lotto Comparison</a><br>
+        <a href="#" data-analytics-name="Lottoland Syndicates">Lottoland Syndicates</a><br>
     </div>
-    <div>
+    <div data-analytics-category="Information">
         <h3>Information</h3>
-        <a href="#">Guaranteed Payout</a><br>
-        <a href="#">Privacy Policy</a><br>
-        <a href="#">Terms and Conditions</a><br>
-        <a href="#">Material Terms Summary</a><br>
-        <a href="#">Help and FAQs</a><br>
+        <a href="#" data-analytics-name="Guaranteed Payout">Guaranteed Payout</a><br>
+        <a href="#" data-analytics-name="Privacy Policy">Privacy Policy</a><br>
+        <a href="#" data-analytics-name="Terms and Conditions">Terms and Conditions</a><br>
+        <a href="#" data-analytics-name="Material Terms Summary">Material Terms Summary</a><br>
+        <a href="#" data-analytics-name="Help and FAQs">Help and FAQs</a><br>
     </div>
-    <div>
+    <div data-analytics-category="Contact">
         <h3>Contact</h3>
-        <a href="#">About Us</a><br>
-        <a href="#">Contact Us</a><br>
-        <a href="#">Careers</a><br>
-        <a href="#">Affiliate program</a><br>
-        <a href="#">Lottoland B2B</a><br>
+        <a href="#" data-analytics-name="About Us">About Us</a><br>
+        <a href="#" data-analytics-name="Contact Us">Contact Us</a><br>
+        <a href="#" data-analytics-name="Careers">Careers</a><br>
+        <a href="#" data-analytics-name="Affiliate Program">Affiliate Program</a><br>
+        <a href="#" data-analytics-name="Lottoland B2B">Lottoland B2B</a><br>
     </div>
-    <div>
+    <div data-analytics-category="Gambling Safely">
         <h3>Gamble Safely</h3>
-        <a href="#">Gamble Safely</a><br>
-        <a href="#">Documents - What and When</a><br>
-        <a href="#">Underage Protection</a><br>
+        <a href="#" data-analytics-name="Gamble Safely">Gamble Safely</a><br>
+        <a href="#" data-analytics-name="Documents">Documents - What and When</a><br>
+        <a href="#" data-analytics-name="Underage">Underage Protection</a><br>
     </div>
-    <div>
+    <div data-analytics-category="Country">
         <h3>Country</h3>
-        <a href="#">International</a><br>
-        <a href="#">Ireland</a><br>
-        <a href="#">India</a><br>
-        <a href="#">Gibraltar</a><br>
-        <a href="#">Mexico</a><br>
+        <a href="#" data-analytics-name="International">International</a><br>
+        <a href="#" data-analytics-name="Ireland">Ireland</a><br>
+        <a href="#" data-analytics-name="India">India</a><br>
+        <a href="#" data-analytics-name="Gibraltar">Gibraltar</a><br>
+        <a href="#" data-analytics-name="Mexico">Mexico</a><br>
     </div>
 </footer>
 
